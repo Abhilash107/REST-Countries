@@ -9,6 +9,7 @@ fetch('https://restcountries.com/v3.1/all')
         console.log(country.name.common);
         const countryCard = document.createElement('a');
         countryCard.classList.add('country-card');
+        countryCard.href= `/country.html?name=${country.name.common}`
 
 
     const cardHTML = `
