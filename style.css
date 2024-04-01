@@ -22,7 +22,7 @@ header{
     box-shadow: 0 2px 4px 4px rgba(0,0,0,0.07);
     width: 100%;
     padding: 18px;
-    animation: slidedown 2s ease forwards;
+    animation: slidedown 1s ease forwards;
 }
 .header-content{
     display: flex;
@@ -48,7 +48,7 @@ header p:hover{
 
 }
 main{
-    margin: 0px 50px;
+    margin: 10px 50px;
     animation: slideIn 1s ease forwards;
 
 }
@@ -117,7 +117,7 @@ main{
 }
 
 @keyframes slidedown {
-    /* 0% {
+    0% {
         transform: translateY(-100%);
     }
     50% {
@@ -129,7 +129,7 @@ main{
     100%{
         transform: translateY(0%);
 
-    } */
+    }
 
     0%{
         opacity: 0;
@@ -145,5 +145,11 @@ main{
 @media (max-width: 768px){
     .countries-container{
         justify-content: center;
+    }
+    .title{
+        font-size: 15px;
+    }
+    .header-content p{
+        font-size: 12px;
     }
 }
