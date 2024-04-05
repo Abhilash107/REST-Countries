@@ -1,9 +1,24 @@
 This is a frontend API project for REST Countries.
 
 
-Frontend API Projects
+# Countries REST API
 
-This repository contains a collection of frontend projects that interact with various APIs. Each project demonstrates how to fetch data from an API and display it on a webpage using HTML, CSS, and JavaScript.
+This project implements a RESTful API for accessing information about countries. It provides endpoints for retrieving various details about countries, including their names, population, capital, currencies, languages, and more.
+
+## Features
+
+- Retrieve a list of all countries
+- Search for a specific country by name
+- Get details about a country by its ISO 3166-1 alpha-2 or alpha-3 code
+
+## Technologies Used
+
+- [RestCountries API](https://restcountries.com) (for country data)
+
+
+
+
+
 
 Table of Contents
 
