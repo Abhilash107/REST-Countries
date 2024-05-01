@@ -55,7 +55,8 @@ main{
 
 .search-filter-container{
     margin-left:7%;
-    margin-top:20px ;
+    margin-top:20px;
+    max-width: max-content;
    
 
     
@@ -63,8 +64,7 @@ main{
 }
 .search-container{
     box-shadow: 0 0 8px 2px rgba(0,0,0,0.1);
-    width: 600px;
-    padding: 0px 20px;
+    padding: 0px 25px;
     border-radius: 10px;                                                                                                                                                                
 
 }
@@ -72,21 +72,13 @@ main{
 .search-container input{
     outline: none;
     border: 0;
+    width: 400px;
     border-radius: 5px;
     padding: 15px 30px;
-    
-   
-    
-
-    
     font-size: 1rem;
     
-
-
 }
-.search-container i{
-    
-}
+
 
 .countries-container{
    
