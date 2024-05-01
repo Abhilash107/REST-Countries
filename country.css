@@ -1,9 +1,14 @@
 main{
-    margin: 40px 100px;
+    margin: 35px 85px;
+}
+
+.back-btn{
+    display: flex;
+    align-items: center;
 }
 
 
-.back-btn{
+.btn{
     box-shadow: 0 2px 4px 4px rgba(0,0,0,0.07); 
     border: 1px solid none;
     padding: 5px 24px;
@@ -79,5 +84,13 @@ main{
     .country-details img {
         width: 70%;
         
+    }
+    .btn{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-left: 0px;
+
+
     }
 }
