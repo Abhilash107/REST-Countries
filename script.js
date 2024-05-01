@@ -1,10 +1,27 @@
 const countryContainer= document.querySelector(".countries-container");
+const filterRegion = document.querySelector('.filter-region');
 
+const searchInput = document.querySelector('.search-container input');
 
+const toggleTheme = document.querySelector('.toggle-theme')
 
+let allCountriesData = 
 fetch('https://restcountries.com/v3.1/all')
 .then( (res) =>res.json())
-.then(   (data) =>{
+.then( (data)=>{
+    renderCountries(data)
+    allCountriesData = data;
+}  );
+
+
+filterRegion.addEventListener('change', (e)=>{
+    fetch(`https://restcountries.com/v3.1/region/${filterRegion.value}`)
+.then( (res) =>res.json())
+.then( renderCountries)
+})
+
+function renderCountries(data){
+    countryContainer.innerHTML= '';
     data.forEach( (country) =>{
         const countryCard = document.createElement('a');
         countryCard.classList.add('country-card');
@@ -12,7 +29,7 @@ fetch('https://restcountries.com/v3.1/all')
 
 
     const cardHTML = `
-    <img src="${country.flags.svg}" alt="flag">
+            <img src="${country.flags.svg}" alt="flag">
             <div class="card-text">
                 <h3>${country.name.common}</h3>
                 <p><b>Population: </b>${country.population.toLocaleString('en-In')}</p>
@@ -20,13 +37,30 @@ fetch('https://restcountries.com/v3.1/all')
                 <p><b>Capital: </b>${country.capital}</p>
             </div>`;
 
-countryCard.innerHTML = cardHTML;
-countryContainer.append(countryCard);
-
-       
+    countryCard.innerHTML = cardHTML;
+    countryContainer.append(countryCard);
 
     } )
-} )
+    
+}
+
+searchInput.addEventListener('input', (e)=>{
+    const filterdCountries =
+    allCountriesData.filter((country)=> country.name.common.toLowerCase().includes(e.target.value.toLowerCase())) ;
+    renderCountries(filterdCountries);
+})
+
+toggleTheme.addEventListener('click' , ()=>{
+    document.body.classList.toggle('dark')
+}
+)
+
+
+
+
+
+
+
 
 // const countryCard = document.createElement('a');
 // countryCard.classList.add('country-card');
@@ -45,6 +79,8 @@ countryContainer.append(countryCard);
 
 // countryCard.innerHTML = cardHTML;
 // countryContainer.append(countryCard);
+
+
 
 
 
