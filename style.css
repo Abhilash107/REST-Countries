@@ -4,6 +4,9 @@
    
 
 }
+html {
+    scroll-behavior: smooth;
+}
 
 
 body{
@@ -54,13 +57,21 @@ header{
 }
 
 header p{
-    border: 1px solid black;
+    border: 0px;
     border-radius: 10px;
     outline: 0;
     padding: 10px 16px;
     cursor: pointer;
-    transition: all 0.5s ease;
+    
    
+}
+header p i {
+    transition: all 0.2s ease;
+}
+
+header p i:hover{
+    transform: rotate(500deg);
+
 }
 
 header p:hover{
@@ -93,8 +104,8 @@ main{
     font-size: 0.9rem;
     font-weight: 500;
     box-shadow: 0 0 8px 2px rgba(0,0,0,0.1);
-    background-color: inherit;
-    color: inherit;
+    background-color: var(--bacground-color);
+    color: var(--text-color);
  
 }
 
@@ -217,6 +228,7 @@ main{
         opacity: 1;
     }
 }
+
 
 @media (max-width: 768px){
     .countries-container{
