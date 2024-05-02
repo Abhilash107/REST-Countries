@@ -67,32 +67,13 @@ toggleTheme.addEventListener('click' , ()=>{
 }
 )
 
+// dark mode in country pages
 
 
 
 
 
 
-
-
-
-// const countryCard = document.createElement('a');
-// countryCard.classList.add('country-card');
-
-
-// const cardHTML = `
-// <img src="https://flagcdn.com/er.svg" alt="flag">
-//                 <div class="card-text">
-//                     <h3>Cyprus</h3>
-//                     <p><b>Population: </b>12323554</p>
-//                     <p><b>Region:  </b>Europe</p>
-//                     <p><b>Capital: </b>Berlin</p>
-//                 </div>
-                
-//             </a>`;
-
-// countryCard.innerHTML = cardHTML;
-// countryContainer.append(countryCard);
 
 
 
